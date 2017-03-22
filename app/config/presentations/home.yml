@@ -3,72 +3,65 @@ data:
     transition-duration: 1000
 
 slides:
-    -
-        content: 'Overview'
-        attr:
-            style: 'opacity: 0.5'
-        data:
-            x: 1555
-            y: -1155
-            z: 1000
-            rotate-x: 45
-            rotate-y: 45
-            rotate-z: 0
+    - content: 'Overview'
+      attr:
+          style: 'opacity: 0.5'
+      data:
+          x: 1555
+          y: -1155
+          z: 1000
+          rotate-x: 45
+          rotate-y: 45
+          rotate-z: 0
 
-    -
-        content: '1'
-        attr:
-            style: "background-color: #555; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
-        data:
-            x: 0
-            z: 0
-            "rotate-y": 0
+    - content: '1'
+      attr:
+          style: "background-color: #555; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
+      data:
+          x: 0
+          z: 0
+          "rotate-y": 0
 
-    -
-        content: '2'
-        attr:
-            style: "background-color: #333; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
-        data:
-            x: 100
-            z: -100
-            rotate-y: 90
+    - content: '2'
+      attr:
+          style: "background-color: #333; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
+      data:
+          x: 100
+          z: -100
+          rotate-y: 90
 
-    -
-        content: '3'
-        attr:
-            style: "background-color: #666; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
-        data:
-            x: 0
-            z: -200
-            "rotate-y": 180
+    - content: '3'
+      attr:
+          style: "background-color: #666; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
+      data:
+          x: 0
+          z: -200
+          "rotate-y": 180
 
-    -
-        content: '4'
-        attr:
-            style: "background-color: #999; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
-        data:
-            x: -100
-            z: -100
-            "rotate-y": 270
+    - content: '4'
+      attr:
+          style: "background-color: #999; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
+      data:
+          x: -100
+          z: -100
+          "rotate-y": 270
 
-    -
-        content: '5'
-        attr:
-            style: "background-color: #aaa; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
-        data:
-            x: 0
-            y: -100
-            z: -100
-            "rotate-y": 360
-            "rotate-x": 90
+    - content: '5'
+      attr:
+          style: "background-color: #aaa; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
+      data:
+          x: 0
+          y: -100
+          z: -100
+          "rotate-y": 360
+          "rotate-x": 90
 
-    -
-        content: '6'
-        attr:
-            style: "background-color: #ccc; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
-        data:
-            x: 0
-            y: 100
-            z: -100
-            "rotate-y": 360
-            "rotate-x": -90
+    - content: '6'
+      attr:
+          style: "background-color: #ccc; width: 200px; height: 200px; padding: 0; margin: 0; line-height: 200px;"
+      data:
+          x: 0
+          y: 100
+          z: -100
+          "rotate-y": 360
+          "rotate-x": -90
