@@ -34,10 +34,20 @@ class ConfigProcessor
         $processor = new Processor();
 
         $presentationConfig = $processor->processConfiguration(new PresentationConfiguration(), [$yamlArray]);
+
         foreach ($presentationConfig['slides'] as $k => $slide) {
             if (!array_key_exists('id', $slide)) {
-                $slide['id'] = $presentationConfig['name'].'_'.$k;
+                if (!is_numeric($k)) {
+                    $slide['id'] = $k;
+                } else {
+                    $slide['id'] = $presentationConfig['name'].'_'.$k;
+                }
             }
+
+            if (isset($presentationConfig['slides'][$slide['id']])) {
+                throw new \RuntimeException('Duplicate slide id "'.$slide['id'].'" for presentation "'.$presentationConfig['name'].'".');
+            }
+
             $presentationConfig['slides'][$k] = $processor->processConfiguration(new SlideConfiguration(), [$slide]);
         }
 
