@@ -19,7 +19,7 @@
     {% spaceless %}
 
     <div id="impress"
-        {%- for key, value in presentation.data if value is not empty %} data-{{ key|replace({'_': '-'}) }}="{{ value }}"{%- endfor -%}
+        {%- for key, value in presentation.data if value is not empty %} data-{{ key }}="{{ value }}"{%- endfor -%}
         {%- for key, value in presentation.attr if value is not empty %} {{ key }}="{{ value }}"{% endfor -%}
     >
         {%- for slide in presentation.slides -%}

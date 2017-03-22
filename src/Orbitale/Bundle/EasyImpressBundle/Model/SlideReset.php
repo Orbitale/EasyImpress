@@ -48,9 +48,9 @@ class SlideReset
         $this->x = (bool) $config['x'];
         $this->y = (bool) $config['y'];
         $this->z = (bool) $config['z'];
-        $this->rotateX = (bool) $config['rotate_x'];
-        $this->rotateY = (bool) $config['rotate_y'];
-        $this->rotateZ = (bool) ($config['rotate_z'] ?: $config['rotate']); // "rotate" and "rotate-z" are aliases
+        $this->rotateX = (bool) $config['rotate-x'];
+        $this->rotateY = (bool) $config['rotate-y'];
+        $this->rotateZ = (bool) ($config['rotate-z'] ?: $config['rotate']); // "rotate" and "rotate-z" are aliases
     }
 
     /**

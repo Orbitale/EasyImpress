@@ -34,19 +34,21 @@ class SlideConfiguration implements ConfigurationInterface
 
                 ->arrayNode('data')
                     ->addDefaultsIfNotSet()
+                    ->normalizeKeys(false)
                     ->children()
                         ->integerNode('x')->defaultValue(null)->end()
                         ->integerNode('y')->defaultValue(null)->end()
                         ->integerNode('z')->defaultValue(null)->end()
                         ->integerNode('rotate')->defaultValue(null)->end()
-                        ->integerNode('rotate_x')->defaultValue(null)->end()
-                        ->integerNode('rotate_y')->defaultValue(null)->end()
-                        ->integerNode('rotate_z')->defaultValue(null)->end()
+                        ->integerNode('rotate-x')->defaultValue(null)->end()
+                        ->integerNode('rotate-y')->defaultValue(null)->end()
+                        ->integerNode('rotate-z')->defaultValue(null)->end()
                     ->end()
                 ->end()
 
                 ->arrayNode('attr')
                     ->addDefaultsIfNotSet()
+                    ->normalizeKeys(false)
                     ->children()
                         ->scalarNode('style')->defaultValue('')->end()
                         ->scalarNode('class')
@@ -54,7 +56,7 @@ class SlideConfiguration implements ConfigurationInterface
                             ->validate()
                             ->always(function($v){
                                 if (false === strpos($v, 'step')) {
-                                    $v = trim('step'.$v);
+                                    $v = trim('step '.$v);
                                 }
 
                                 return $v;
@@ -66,14 +68,15 @@ class SlideConfiguration implements ConfigurationInterface
 
                 ->arrayNode('reset')
                     ->addDefaultsIfNotSet()
+                    ->normalizeKeys(false)
                     ->children()
                         ->booleanNode('x')->defaultValue(false)->end()
                         ->booleanNode('y')->defaultValue(false)->end()
                         ->booleanNode('z')->defaultValue(false)->end()
                         ->booleanNode('rotate')->defaultValue(false)->end()
-                        ->booleanNode('rotate_x')->defaultValue(false)->end()
-                        ->booleanNode('rotate_y')->defaultValue(false)->end()
-                        ->booleanNode('rotate_z')->defaultValue(false)->end()
+                        ->booleanNode('rotate-x')->defaultValue(false)->end()
+                        ->booleanNode('rotate-y')->defaultValue(false)->end()
+                        ->booleanNode('rotate-z')->defaultValue(false)->end()
                     ->end()
                 ->end()
 

@@ -48,9 +48,9 @@ class SlideData implements \IteratorAggregate
         $this->x       = (int) $config['x'] ?: null;
         $this->y       = (int) $config['y'] ?: null;
         $this->z       = (int) $config['z'] ?: null;
-        $this->rotateX = (int) $config['rotate_x'] ?: null;
-        $this->rotateY = (int) $config['rotate_y'] ?: null;
-        $this->rotateZ = (int) ($config['rotate_z'] ?: $config['rotate']) ?: null; // "rotate" and "rotate-z" are aliases
+        $this->rotateX = (int) $config['rotate-x'] ?: null;
+        $this->rotateY = (int) $config['rotate-y'] ?: null;
+        $this->rotateZ = (int) ($config['rotate-z'] ?: $config['rotate']) ?: null; // "rotate" and "rotate-z" are aliases
     }
 
     public function toArray()
