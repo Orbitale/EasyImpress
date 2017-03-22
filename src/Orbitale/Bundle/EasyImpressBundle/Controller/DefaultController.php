@@ -25,6 +25,10 @@ class DefaultController extends Controller
     {
         $presentation = $this->get('impress')->getPresentation($presentationName);
 
+        if (!$presentation) {
+            throw $this->createNotFoundException('Presentation "'.$presentationName.'" not found.');
+        }
+
         return $this->render('front/presentation.html.twig', [
             'presentation' => $presentation,
         ]);
