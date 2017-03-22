@@ -1,10 +1,16 @@
 slider_not_found: Slider non trouvé
 
 error:
+    title: 'Erreur'
     httpCode: 'Erreur %code%...'
 
 lang: Langue
 
+impressjs:
+    fallbackMessage: ''
+
 slides:
     home:
         title: Accueil
+        translated_slide: 'Ceci est une diapo traduite!'
+

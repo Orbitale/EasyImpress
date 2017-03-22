@@ -1,6 +1,7 @@
 slider_not_found: Slider not found
 
 error:
+    title: 'Error'
     httpCode: '%code% error...'
 
 lang: Language
@@ -11,4 +12,4 @@ impressjs:
 slides:
     home:
         title: This is your home page
-        translated_slide: This is a translated slide!
+        translated_slide: 'This is a translated slide!'
