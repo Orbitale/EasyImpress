@@ -11,7 +11,7 @@
  *
  * ------------------------------------------------
  *  author:  Bartek Szopka
- *  version: 0.5.3
+ *  version: 0.6.0
  *  url:     http://bartaz.github.com/impress.js/
  *  source:  http://github.com/bartaz/impress.js/
  */
@@ -56,7 +56,7 @@
 
     } )();
 
-    // `arraify` takes an array-like object and turns it into real Array
+    // `arrayify` takes an array-like object and turns it into real Array
     // to make all the Array.prototype goodness available.
     var arrayify = function( a ) {
         return [].slice.call( a );
@@ -131,11 +131,6 @@
     // `scale` builds a scale transform string for given data.
     var scale = function( s ) {
         return " scale(" + s + ") ";
-    };
-
-    // `perspective` builds a perspective transform string for given data.
-    var perspective = function( p ) {
-        return " perspective(" + p + "px) ";
     };
 
     // `getElementFromHash` returns an element located by id from hash part of
@@ -384,7 +379,8 @@
             css( root, {
                 top: "50%",
                 left: "50%",
-                transform: perspective( config.perspective / windowScale ) + scale( windowScale )
+                perspective: ( config.perspective / windowScale ) + "px",
+                transform: scale( windowScale )
             } );
             css( canvas, rootStyles );
 
@@ -504,9 +500,13 @@
             // that both of them are finished.
             css( root, {
 
+                // For IE 11 support we must specify perspective independent
+                // of transform.
+                perspective: ( config.perspective / targetScale ) + "px",
+
                 // To keep the perspective look similar for different scales
                 // we need to 'scale' the perspective, too
-                transform: perspective( config.perspective / targetScale ) + scale( targetScale ),
+                transform: scale( targetScale ),
                 transitionDuration: duration + "ms",
                 transitionDelay: ( zoomin ? delay : 0 ) + "ms"
             } );
