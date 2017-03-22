@@ -20,10 +20,11 @@ if (true === $debug) {
 $kernel = new AppKernel($environment, $debug);
 $kernel->loadClassCache();
 
+// Feel free to activate AppCache if you like
 if (false === $debug && 'prod' === $environment) {
-    $kernel = new AppCache($kernel);
+    // $kernel = new AppCache($kernel);
     // When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
-    Request::enableHttpMethodParameterOverride();
+    // Request::enableHttpMethodParameterOverride();
 }
 
 $request = Request::createFromGlobals();
