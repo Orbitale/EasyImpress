@@ -4,7 +4,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "Orbitale\\": "src/Orbitale/"
         },
         "classmap": [
             "app/AppKernel.php",
@@ -13,14 +13,13 @@
     },
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "3.1.*",
-        "symfony/monolog-bundle": "^2.8",
+        "symfony/symfony": "3.2.*",
+        "symfony/monolog-bundle": "^3.0",
         "symfony/polyfill-apcu": "^1.0",
         "sensio/distribution-bundle": "^5.0",
         "incenteev/composer-parameter-handler": "^2.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0"
     },
     "scripts": {
