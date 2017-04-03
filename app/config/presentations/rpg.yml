@@ -35,12 +35,12 @@ slides:
 
         https://www.esteren.org/
 
-        ![Logo Esteren](../img/esteren_logo.png)
+        ![Logo Esteren](img/esteren_logo.png)
 
     - content: |
         Il m'a fallu lire TOUT le livre: 350 pages
 
-        ![Livre 1](../img/livre1.jpg)
+        ![Livre 1](img/livre1.jpg)
 
     - content_type: html
       content: |
@@ -89,7 +89,7 @@ slides:
     - content: |
         Je me suis donc inspiré des plus grands développeurs
     - content: |
-        ![Fabien](../img/fabpot.png)
+        ![Fabien](img/fabpot.png)
 
     - content: |
         J'ai créé un outil open-source, il y a 6 ans.
@@ -100,14 +100,14 @@ slides:
 
         (C'est du PHP tout pourri)
 
-    - content: '![capt1](../img/capt1.png)'
-    - content: '![capt1](../img/capt2.png)'
+    - content: '![capt1](img/capt1.png)'
+    - content: '![capt1](img/capt2.png)'
     - content: |
-        ![capt1](../img/capt3.png)
+        ![capt1](img/capt3.png)
 
         (ceci est un fichier pdf auto-généré)
 
-    - content: '![map](../img/map.png)'
+    - content: '![map](img/map.png)'
 
 
     - content: |
