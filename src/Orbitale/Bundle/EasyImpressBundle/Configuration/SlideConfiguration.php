@@ -28,6 +28,7 @@ class SlideConfiguration implements ConfigurationInterface
             ->children()
                 ->scalarNode('id')->isRequired()->end()
 
+                ->scalarNode('content_type')->defaultValue('markdown')->end()
                 ->scalarNode('content')->defaultValue(null)->end()
 
                 ->variableNode('extra')->defaultValue(null)->end()

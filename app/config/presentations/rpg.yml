@@ -1,0 +1,155 @@
+
+data:
+    transition-duration: 500
+
+inactive_opacity: 0
+
+increments:
+    z: 5000
+
+slides:
+    - content: |
+        Alexandre Rock Ancelelet
+
+        PHP / Symfony trainer
+
+        Follow me `@pierstoval` **(everywhere)**
+
+    - content_type: html
+      content: |
+        <h1>Comment j'ai <span style="text-decoration: line-through;">digitalisé</span> numérisé le jeu de rôle ?</h1>
+
+    - content: |
+        D'abord, Jean-Pierre, une question :
+
+        **C'est quoi le Jeu de rôle ? 🤗**
+
+    - content_type: html
+      content: |
+        <h1 style="font-size: 4.2em;">🍺 + 🍕 + 📝 + 🎲</h1>
+        +<br>
+        Fun
+
+    - content: |
+        J'ai pris un jeu de rôle papier.
+
+        https://www.esteren.org/
+
+        ![Logo Esteren](../img/esteren_logo.png)
+
+    - content: |
+        Il m'a fallu lire TOUT le livre: 350 pages
+
+        ![Livre 1](../img/livre1.jpg)
+
+    - content_type: html
+      content: |
+        <p>Super !<br>J'ai appris comment créer un personnage !</p>
+
+        <div style="font-size: 3em;">👧 👨</div>
+
+        <div style="font-size: 3em;">🎉</div>
+
+    - content: |
+        J'ai cherché un bon moyen d'en créer plus rapidement.
+
+        Parce que se taper la lecture de 50 pages de règles à chaque fois, c'est...
+
+        💤💤...
+
+    - content: |
+        J'ai découvert le site [La Scénariothèque](http://www.scenariotheque.org/)
+
+        Très cool !
+
+        C'est une plateforme pour les "rôlistes" avec beaucoup d'aides de jeu, de feuilles de personnage précalculées !
+
+    - content_type: html
+      content: |
+        <p>Des fichiers DOCX, ODT, XLS, PDF <small><small>(50Mo le PDF...)</small></small>, JPG...</p>
+
+        <p>Plein d'outils !</p>
+
+    - content: 'Et puis...'
+
+    - content_type: html
+      content: '<div style="font-size: 5em;">💥</div>'
+
+    - content: |
+        En fait, aucun de ces fichiers ne correspondait.
+
+        Pas compatible, pas performant, pas pratique, pas facile à comprendre.
+
+        Bref.
+
+        Pas adapté.
+
+        <small>(Comme nos projets legacy)</small>
+
+    - content: |
+        Je me suis donc inspiré des plus grands développeurs
+    - content: |
+        ![Fabien](../img/fabpot.png)
+
+    - content: |
+        J'ai créé un outil open-source, il y a 6 ans.
+
+        Utilisé tous les jours par des "rôlistes" qui jouent à ce jeu. Près 3400 personnages enregistrés.
+
+        Dispo ici : https://github.com/Esteren/CorahnRinV1
+
+        (C'est du PHP tout pourri)
+
+    - content: '![capt1](../img/capt1.png)'
+    - content: '![capt1](../img/capt2.png)'
+    - content: |
+        ![capt1](../img/capt3.png)
+
+        (ceci est un fichier pdf auto-généré)
+
+    - content: '![map](../img/map.png)'
+
+
+    - content: |
+        Aujourd'hui, il est en train d'être complètement refait.
+
+        Avec plein d'outils cools, performants, propres, maintenables.
+
+    - content: |
+        Des outils ce que vous découvrez en meetup, en convention, dans votre boulot, sur Github, sur Twitter,
+        sur des blogs...
+
+    - content_type: html
+      content: |
+        <p>Symfony, Twig, Doctrine, LeafletJS, Gulp, Behat, PHPUnit <small>(les tests, c'est cool)</small>, et tant
+        d'autres</p>
+
+    - content: |
+        Des outils sans lesquels personne ne serait là aujourd'hui à cette conférence.
+
+    - content: |
+        Des outils sans lequels nous ne serions pas de bons développeurs aujourd'hui.
+
+    - content_type: html
+      content: |
+        <p>J'ai pu développer moi-même des outils:</p>
+
+        <ul>
+          <li style="text-align:left;"><a href="https://github.com/Orbitale/CmsBundle">https://github.com/Orbitale/CmsBundle</a></li>
+          <li style="text-align:left;"><a href="https://github.com/Orbitale/ImageMagickPHP">https://github.com/Orbitale/ImageMagickPHP</a></li>
+          <li style="text-align:left;"><a href="https://github.com/Orbitale/Gulpfile">https://github.com/Orbitale/Gulpfile</a></li>
+          <li style="text-align:left;"><a href="https://github.com/Pierstoval/CharacterManagerBundle">https://github.com/Pierstoval/CharacterManagerBundle</a></li>
+        </ul>
+
+    - content_type: html
+      content: |
+
+        <p>Alors un grand merci à tous les contributeurs de projets libres et open-source.</p>
+
+        <small>fabpot, nicolas-grekas, webmozart, Tobion, xabbuh, stof, Seldaek, vicb, schmittjoh, kriswallsmith, jakzal,
+        dunglas, weaverryan, pborreli, romainneutron, aitboudad, lyrixx, javiereguiluz, stloyd, lsmith77, wouterj,
+        ogizanagi, chalasr, hason, igorw, beberlei, jmikola, jfsimon, HeahDude, hhamon, saro0h, etc...</small>
+
+    - content_type: html
+      content: |
+        <p style="font-size: 3em;">Et merci à vous.</p>

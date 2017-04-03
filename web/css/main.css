@@ -18,7 +18,8 @@
 a,
 a:focus,
 a:hover {
-    color: #fff;
+    color: #bbf !important;
+    text-decoration: underline;
 }
 
 /* Custom default button */

@@ -51,17 +51,7 @@ class Impress
      */
     public function getPresentation($name)
     {
-        // Try to get presentation from cache
-        $item = $this->cacheAdapter->getItem('presentations.'.$name);
-
-        if ($item->isHit() && $item->get() instanceof Presentation) {
-            return $item->get();
-        }
-
-        $item->set($this->doGetPresentation($name));
-        $this->cacheAdapter->save($item);
-
-        return $item->get();
+        return $this->doGetPresentation($name);
     }
 
     /**
@@ -69,20 +59,7 @@ class Impress
      */
     public function getAllPresentations()
     {
-        // Try to get presentation list from cache
-        $item = $this->cacheAdapter->getItem('presentations');
-
-        if ($item->isHit()) {
-            $itemValue = $item->get();
-            if (count($itemValue) && reset($itemValue) instanceof Presentation) {
-                return $item->get();
-            }
-        }
-
-        $item->set($this->doGetPresentations());
-        $this->cacheAdapter->save($item);
-
-        return $item->get();
+        return $this->doGetPresentations();
     }
 
     /**

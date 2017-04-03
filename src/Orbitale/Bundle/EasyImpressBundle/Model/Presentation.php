@@ -63,17 +63,10 @@ class Presentation
         $currentIncrementsArray = array_filter($baseIncrements);
         $incrementsToProcess = array_keys($currentIncrementsArray);
 
+        $parseDown = new \Parsedown();
+
         foreach ($config['slides'] as $slideArray) {
             foreach ($incrementsToProcess as $dataKey) {
-                if (array_key_exists($dataKey, $slideArray['data'])) {
-                    throw new \InvalidArgumentException(sprintf(
-                        'As you have increments in the "%s" presentation, ' .
-                        'you cannot use value for the "%s" data property '.
-                        'in slide "%s"',
-                        $this->name, $dataKey, $slideArray['id']
-                    ));
-                }
-
                 // Check if we have to reset value before calculating incrementation values.
                 if (array_key_exists($dataKey, $slideArray['reset']) && true === $slideArray['reset'][$dataKey]) {
                     $currentIncrementsArray[$dataKey] = $baseIncrements[$dataKey];
@@ -84,6 +77,15 @@ class Presentation
 
                 // Update incrementation values.
                 $currentIncrementsArray[$dataKey] += $baseIncrements[$dataKey];
+            }
+
+            switch ($slideArray['content_type']) {
+                case 'html':
+                    $slideArray['content'] = trim($slideArray['content']);
+                    break;
+                case 'markdown':
+                default:
+                    $slideArray['content'] = $parseDown->text($slideArray['content']);
             }
 
             $slide = new Slide($slideArray, $this);

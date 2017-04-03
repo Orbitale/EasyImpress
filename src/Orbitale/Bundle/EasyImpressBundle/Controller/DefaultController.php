@@ -11,6 +11,7 @@
 
 namespace Orbitale\Bundle\EasyImpressBundle\Controller;
 
+use Orbitale\Bundle\EasyImpressBundle\Model\Presentation;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -23,6 +24,7 @@ class DefaultController extends Controller
      */
     public function presentationAction($presentationName)
     {
+        /** @var Presentation $presentation */
         $presentation = $this->get('impress')->getPresentation($presentationName);
 
         if (!$presentation) {
