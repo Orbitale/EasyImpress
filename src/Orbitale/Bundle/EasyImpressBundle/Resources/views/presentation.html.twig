@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends layout %}
 
 {% block bodyClass %}impress-not-supported{% endblock %}
 
@@ -13,8 +13,7 @@
     </style>
 {% endblock %}
 
-{% block navigation %}{% endblock %}
-{% block contentWrapper %}
+{% block easy_impress_presentation %}
 
     {% spaceless %}
 
@@ -42,7 +41,6 @@
                         <div class="inner cover">
 
                             {%- if (presentation.slides | length) > 1 -%}
-                            <!--
                                 <div id="arrow_clickable">
                                     <div id="left_arrow_clickable"></div>
                                     <div id="right_arrow_clickable"></div>
@@ -51,14 +49,20 @@
                                     <div id="left_arrow"><span class="glyphicon glyphicon-chevron-left"></span></div>
                                     <div id="right_arrow"><span class="glyphicon glyphicon-chevron-right"></span></div>
                                 </div>
-                            -->
                             {%- endif -%}
 
                         </div>
                     {%- endblock -%}
                 </div>
 
-                {{ include('_footer.html.twig') }}
+                <footer class="mastfoot" id="footer">
+                    <p>
+                        <small>
+                            Pierstoval &ndash; {{ 'now' | date('Y') }}
+                        </small>
+                    </p>
+                </footer>
+
             </div>
         </div>
     </div>
@@ -69,6 +73,6 @@
 
 {% block js %}
     {{ parent() }}
-    <script src="{{ asset('js/impress.js') }}"></script>
-    <script src="{{ asset('js/main_impress.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/easyimpress/js/impress.js') }}"></script>
+    <script src="{{ asset('bundles/easyimpress/js/main_impress.js') }}" type="text/javascript"></script>
 {% endblock %}

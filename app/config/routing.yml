@@ -1,6 +1,2 @@
-presentation:
-    path: /{presentationName}
-    defaults:
-        _controller: 'EasyImpressBundle:Default:presentation'
-        presentationName: home
-
+easy_impress:
+    resource: '@EasyImpressBundle/Resources/config/routing.yml'

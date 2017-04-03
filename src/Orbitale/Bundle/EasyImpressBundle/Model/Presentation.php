@@ -63,7 +63,7 @@ class Presentation
         $currentIncrementsArray = array_filter($baseIncrements);
         $incrementsToProcess = array_keys($currentIncrementsArray);
 
-        $parseDown = new \Parsedown();
+        $parseDown = class_exists('Parsedown') ? new \Parsedown() : null;
 
         foreach ($config['slides'] as $slideArray) {
             foreach ($incrementsToProcess as $dataKey) {
@@ -85,7 +85,7 @@ class Presentation
                     break;
                 case 'markdown':
                 default:
-                    $slideArray['content'] = $parseDown->text($slideArray['content']);
+                    $slideArray['content'] = $parseDown ? $parseDown->text($slideArray['content']) : $slideArray['content'];
             }
 
             $slide = new Slide($slideArray, $this);
