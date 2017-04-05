@@ -3,9 +3,6 @@
     "license": "mit",
     "type": "project",
     "autoload": {
-        "psr-4": {
-            "Orbitale\\": "src/Orbitale/"
-        },
         "classmap": [
             "app/AppKernel.php",
             "app/AppCache.php"
@@ -18,7 +15,8 @@
         "symfony/polyfill-apcu": "^1.0",
         "sensio/distribution-bundle": "^5.0",
         "incenteev/composer-parameter-handler": "^2.0",
-        "erusev/parsedown": "^1.6"
+        "erusev/parsedown": "^1.6",
+        "orbitale/easyimpress-bundle": "^1.0"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^3.0"
@@ -29,8 +27,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-install-cmd": [
             "@symfony-scripts"
