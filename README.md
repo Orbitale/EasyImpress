@@ -1,6 +1,3 @@
-:warning: This is the v2 branch of EasyImpress, if you are looking for v1,
- please follow [this link](https://github.com/Orbitale/EasyImpress/tree/v1)
-
 Impress Portfolio with Symfony "small" edition
 ==============================================
 
