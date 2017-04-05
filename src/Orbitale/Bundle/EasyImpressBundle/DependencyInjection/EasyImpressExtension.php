@@ -23,7 +23,15 @@ final class EasyImpressExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
+        $configuration = new Configuration();
+        $config = $this->processConfiguration($configuration, $configs);
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        $presentationsDir = $config['presentations_dir'] ?: $container->getParameter('kernel.root_dir').'/config/presentations/';
+
+        $container->setParameter('easy_impress.presentations_dir', $presentationsDir);
+        $container->setParameter('easy_impress.layout', $config['layout']);
     }
 }

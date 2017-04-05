@@ -1,10 +1,12 @@
-parameters:
-    easy_impress_layout: 'EasyImpressBundle::layout.html.twig'
-
 services:
     easy_impress.controller.presentation:
         class: Orbitale\Bundle\EasyImpressBundle\Controller\PresentationController
         arguments:
-            - '%easy_impress_layout%'
-            - '@impress'
+            - '%easy_impress.layout%'
+            - '@easy_impress'
             - '@templating'
+
+    easy_impress:
+        class: Orbitale\Bundle\EasyImpressBundle\Impress\EasyImpress
+        arguments:
+            - '%easy_impress.presentations%'

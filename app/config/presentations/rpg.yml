@@ -26,9 +26,9 @@ slides:
 
     - content_type: html
       content: |
-        <h1 style="font-size: 4.2em;">🍺 + 🍕 + 📝 + 🎲</h1>
-        +<br>
-        Fun
+        <h1 style="font-size: 3.5em;">🍺 + 🍕 + 📝 + 🎲</h1>
+        <h1 style="font-size: 3em;">=</h1>
+        <h1 style="font-size: 3em;">Fun</h1>
 
     - content: |
         J'ai pris un jeu de rôle papier.

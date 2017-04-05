@@ -58,36 +58,7 @@ class Presentation
         $this->slides = new ArrayCollection();
         $this->increments = new SlideData($config['increments']);
 
-        // We need to compute incrementation of the different coordinates.
-        $baseIncrements = $this->increments->toArray();
-        $currentIncrementsArray = array_filter($baseIncrements);
-        $incrementsToProcess = array_keys($currentIncrementsArray);
-
-        $parseDown = class_exists('Parsedown') ? new \Parsedown() : null;
-
         foreach ($config['slides'] as $slideArray) {
-            foreach ($incrementsToProcess as $dataKey) {
-                // Check if we have to reset value before calculating incrementation values.
-                if (array_key_exists($dataKey, $slideArray['reset']) && true === $slideArray['reset'][$dataKey]) {
-                    $currentIncrementsArray[$dataKey] = $baseIncrements[$dataKey];
-                }
-
-                // Update slide values.
-                $slideArray['data'][$dataKey] = $currentIncrementsArray[$dataKey];
-
-                // Update incrementation values.
-                $currentIncrementsArray[$dataKey] += $baseIncrements[$dataKey];
-            }
-
-            switch ($slideArray['content_type']) {
-                case 'html':
-                    $slideArray['content'] = trim($slideArray['content']);
-                    break;
-                case 'markdown':
-                default:
-                    $slideArray['content'] = $parseDown ? $parseDown->text($slideArray['content']) : $slideArray['content'];
-            }
-
             $slide = new Slide($slideArray, $this);
             $this->slides->add($slide);
         }

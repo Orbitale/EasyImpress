@@ -11,7 +11,7 @@
 
 namespace Orbitale\Bundle\EasyImpressBundle\Controller;
 
-use Orbitale\Bundle\EasyImpressBundle\Impress\Impress;
+use Orbitale\Bundle\EasyImpressBundle\Impress\EasyImpress;
 use Orbitale\Bundle\EasyImpressBundle\Model\Presentation;
 use Symfony\Bundle\TwigBundle\TwigEngine;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,7 +20,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 class PresentationController
 {
     /**
-     * @var Impress
+     * @var EasyImpress
      */
     private $impress;
 
@@ -34,7 +34,7 @@ class PresentationController
      */
     private $layout;
 
-    public function __construct($layout, Impress $impress, TwigEngine $twig)
+    public function __construct($layout, EasyImpress $impress, TwigEngine $twig)
     {
         $this->impress = $impress;
         $this->twig = $twig;
