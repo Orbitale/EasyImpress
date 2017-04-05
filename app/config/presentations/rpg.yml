@@ -2,10 +2,11 @@
 data:
     transition-duration: 500
 
-inactive_opacity: 0
+inactive_opacity: 0.1
 
 increments:
     z: 5000
+    y: 1500
 
 slides:
     - content: |
