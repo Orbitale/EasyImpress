@@ -1,5 +1,0 @@
-presentation:
-    path: /{presentationName}
-    defaults:
-        _controller: 'easy_impress.controller.presentation:presentation'
-        presentationName: home
