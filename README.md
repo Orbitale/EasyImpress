@@ -2,10 +2,13 @@ Impress Portfolio with Symfony "small" edition
 ==============================================
 
 This is a simple [Symfony](http://symfony.com/) application using the awesome
-[Impress.js](https://github.com/bartaz/impress.js) to create sliders based on a single `yml`
-configuration file.
+[Impress.js](https://github.com/bartaz/impress.js) combined with [EasyImpressBundle](https://github.com/Orbitale/EasyImpressBundle)
+to create sliders based on a single `yml` configuration file.
 
 [View the online demo](http://demo.orbitale.io/easy_impress/)
+
+**ℹ️ Note:** This is just the DEMO app. If you want to see the bundle and integrate it in your own app,
+go to [EasyImpressBundle](https://github.com/Orbitale/EasyImpressBundle) 😃
 
 # Requirements
 
